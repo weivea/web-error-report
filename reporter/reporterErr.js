@@ -10,10 +10,7 @@
 
 
 
-  if(!window.xy_bj_reporter){
-    window.xy_bj_reporter = {};
-  }
-  window.xy_bj_reporter.reportErr = reportErr
+  window.webReportErr = reportErr;
 
   addHandler(window,'error',function (msg, srcUrl, lineNo, col, error) {
 

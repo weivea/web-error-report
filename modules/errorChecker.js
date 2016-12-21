@@ -11,8 +11,8 @@ const sendMail = require('./sendMail');
 const logger = require("../modules/log4js").checkLog;
 const connection = mysql.createConnection(config.reportDb);
 
-//查询前一个小时的数据
-const timeLast = 3600;
+//查询前  config.errorCheckTimeLast  秒的数据
+const timeLast = config.errorCheckTimeLast;
 
 /**
  * 链接数据库

@@ -19,6 +19,8 @@ module.exports = {
   reportBufferLength:1000000,//缓冲区数据条数的长度
   reportSQLPoolNum:5,//上报数据入库连接数
 
+  errorCheckTimeLast:300,//单位:秒,表示检测300秒之前的错误记录
+
   //允许上报的域名配置
   validDomain:{
     "localhost":true,
@@ -46,7 +48,6 @@ module.exports = {
   //邮件发送配置
   mailOptions: {
     from: '"xxxx 👥" <xxx@xxx.com>', // sender address
-    // to: 'jianli.wei@yingzt.com', // list of receivers
     to: 'yyy@yyyy.com', // list of receivers
     subject: 'web error report', // Subject line
     text: 'web前端北京，错误上报 🐴', // plaintext body
