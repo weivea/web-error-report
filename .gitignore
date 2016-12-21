@@ -1,0 +1,6 @@
+node_modules
+.idea
+.vscode
+logs/log_file/*.log*
+error.log
+nohup.out
