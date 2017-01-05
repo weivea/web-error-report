@@ -24,11 +24,9 @@
       if(newMsg.error){
         newMsg = newMsg.error.stack || newMsg.error.message
       }else {
-        var newMsgTmp = newMsg;
-        newMsg = newMsgTmp.type ? (newMsgTmp.type + "-"):'';
-        if(newMsgTmp.message){
-          newMsg += newMsgTmp.message
-        }
+        newMsg += newMsg.type ?
+          ("--" + newMsg.type + "--" + (newMsg.target ?
+            (newMsg.target.tagName + "::" + newMsg.target.src) : "")) : "";
       }
     }
 
